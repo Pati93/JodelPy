@@ -15,7 +15,7 @@ location = {'latitude' : 0, 'longtitude' : 0, 'city' : 'City'}
 
 class RESTClient(object):
     API_URL = 'https://api.go-tellm.com/api/v2'
-    
+
     BASE_HEADERS = {"Connection": "keep-alive",
                     "Accept-Encoding": "gzip",
                     "Content-Type": "application/json; charset=UTF-8"}
@@ -151,7 +151,15 @@ class RESTClient(object):
         self.set_pos(self.location['longtitude'], self.location['latitude'], self.location['city'])
         return "Bearer %s" % access['access_token']
 
-    def __init__(self, location, auth=None):
+    def __init__(self, location, auth=None, enable_tor=False):
+        self.tor_enabled = enable_tor
+        if self.tor_enabled:
+            import socks
+            import socket
+
+            socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9150)
+            socket.socket = socks.socksocket
+
         self.headers = dict(self.BASE_HEADERS)
         self.headers['User-Agent'] = self.USER_AGENT
         self.location = location
