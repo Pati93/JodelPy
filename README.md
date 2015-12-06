@@ -33,7 +33,8 @@ JodelPy is a rudimentary Python Interface for Jodel ( http://jodel-app.com )
 ### Requirements
 
    - Python 2.7
-   - Requests
+   - Requests ( `pip install requests` )
+   - tqdm ( `pip install tqdm` )
    - PySocks (for TOR)
 
 ### TOR support
