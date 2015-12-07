@@ -44,7 +44,7 @@ for post in posts:
             print "No comments ! \n\n----------------------------\n"
             continue
         for comment in  post['children']:
-            print "[%s] %s\n" % (comment['vote_count'],comment['message'])
+            print "[%s] %s\n" % (comment['vote_count'],comment['message'].encode('UTF-8'))
     else:
         amount = int(raw_input('# Wie viel ? '))
         for i in tqdm(range(amount)):
