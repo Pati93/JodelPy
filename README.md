@@ -1,6 +1,6 @@
 # JodelPy
 
-JodelPy is a rudimentary Python Interface for Jodel ( http://jodel-app.com )
+JodelPy is a rudimentary Python Interface for [Jodel](http://jodel-app.com)
 
 ### Features
 
@@ -15,26 +15,26 @@ JodelPy is a rudimentary Python Interface for Jodel ( http://jodel-app.com )
 ### Votebot
 
   - Interactive Voting application
-  - Edit Location in votebot.py !
-  - Usage : python votebot.py
+  - Edit Location in votebot.py
+  - Usage: python votebot.py
 
 ### JodelPull
 
   - Application to dump Jodels to JSON files.
   - Uni Bremen included as Location
-  - Usage : python jodelpull.py -f <location-file> <output-file>
+  - Usage: python jodelpull.py -f <location-file> <output-file>
 
 ### JodelPost
 
   - Interactive posting
   - VoteBot included
-  - Download for Windows : https://github.com/jafrewa/JodelPy/releases/download/0.1/JodelPost.0.1.zip
+  - Download for Windows: https://github.com/jafrewa/JodelPy/releases/download/0.1/JodelPost.0.1.zip
 
 ### Requirements
 
    - Python 2.7
-   - Requests ( `pip install requests` )
-   - tqdm ( `pip install tqdm` )
+   - Requests (`pip install requests`)
+   - tqdm (`pip install tqdm`)
    - PySocks (for TOR)
 
 ### TOR support
